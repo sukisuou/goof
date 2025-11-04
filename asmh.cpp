@@ -5,11 +5,11 @@
 #define db =
 #define equ = 
 #define global
+#define _start
 #define mov func1(
 #define end );
 #define _xor func2(
 #define syscall print();
-#define _start
 #define OxA ;
 
 //ahem

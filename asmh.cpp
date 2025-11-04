@@ -15,7 +15,7 @@
 //ahem
 int rax = 0;
 int rdi = 0;
-std::string rsi;
+char* rsi = nullptr;
 int rdx = 0;
 std::string msg;
 int len = 0;
@@ -29,16 +29,23 @@ money $;
 void func1(int& a, int b){
     a = b;
 }
-void func1(std::string& a, const std::string& b){
-    a = b;
+void func1(char*& a, std::string& b){
+    a = &b[0];
 }
 void func2(int& a, int b){
     a = a ^ b;
 }
 void print(){
-    if(rax == 1) std::cout << rsi;
+    if(rax == 1){
+        for(int i = 0; i < len; ++i){
+            std::cout << *(rsi + i);
+        }
+    }
     if(rax == 60) return;
 }
+
+
+
 
 
 

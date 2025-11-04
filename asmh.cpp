@@ -10,7 +10,7 @@
 #define _xor func2(
 #define syscall print();
 #define _start
-#define OxA
+#define OxA ;
 
 //ahem
 int rax = 0;
@@ -46,7 +46,7 @@ void print(){
 
 
 void section_data(){
-    msg db "Hello world!"; OxA
+    msg db "Hello world!" OxA
     len equ $ - msg;
 }    
 
